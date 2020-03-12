@@ -1,0 +1,41 @@
+<div class="container">
+<main role="main">
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="../assets/blood.svg" style="fill: red;" alt="" width="72" height="72">
+        <h2>Noxum Diabetes Predictor</h2>
+        <p class="lead">The Noxum Diabates Predictor is a proof of concept commisioned by Samures to find out if
+            diabetes
+            can be prevented by predicting diabetes at an early stage using <b>machine learning</b>.</p>
+    </div>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" *ngIf="diabetes">
+        <div class="container">
+            <h2 class="display-3">Result: Diabetes Type II</h2>
+            <h4>Your results have shown that you are likely to develop <b>type II diabetes</b>. We came to this result by comparing your body values to those of diabetes patients via machine learning.</h4>
+            <h4>This advice is not medically binding. However, concidering this result, it might be a good idea to visit your general practitionar to discuss the topic further. Diabetes is partly preventable, we advice you to <a href="https://medlineplus.gov/howtopreventdiabetes.html" target="_blank">make certain lifestyle changes</a>. When a person has developed diabetes, it can <b>not</b> be cured.</h4>
+            <br><p><a class="btn btn-primary btn-lg" href="https://www.diabetes.org/diabetes/newly-diagnosed" role="button" target="_blank">What's next? &raquo;</a></p>
+            <p><a class="btn btn-secondary btn-lg" routerLink="/calculator" role="button">Retake the test &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="jumbotron" *ngIf="!diabetes">
+        <div class="container">
+            <h2 class="display-3">Result: Healthy</h2>
+            <h4>Your results have shown that you are <b>not</b> likely to develop diabetes. We came to this result by comparing your body values to those of diabetes patients via machine learning.</h4>
+            <h4>This advice is not medically binding. Our machine learning algorithm predicts that you will not develop diabetes. However, the algorithm's accuracy is (of course) not 100%. It can't hurt to take some precautionary measures. Diabetes is partly preventable, we advice you to consider <a href="https://medlineplus.gov/howtopreventdiabetes.html" target="_blank">making certain lifestyle changes</a>. When a person contracts diabetes, it can <b>not</b> be cured.</h4>
+            <br><p><a class="btn btn-primary btn-lg" href="https://www.diabetes.org/diabetes/newly-diagnosed" role="button" target="_blank">What's next? &raquo;</a></p>
+            <p><a class="btn btn-secondary btn-lg" routerLink="/calculator" role="button">Retake the test &raquo;</a></p>
+        </div>
+    </div>
+</main>
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Noxum Inc.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a
+          href="https://www.gdprprivacynotice.com/live.php?token=C3qBoN0Vp9UlAahxsbx1daw94wC66hX6"
+          target="_blank">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>

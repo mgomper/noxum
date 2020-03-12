@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-calculator',
+  templateUrl: './calculator.component.html',
+  styleUrls: ['./calculator.component.css']
 })
+export class CalculatorComponent {
 
-export class AppComponent {
   diabetesForm;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     this.diabetesForm = new FormGroup({
       name: new FormControl('null'),
@@ -29,9 +32,18 @@ export class AppComponent {
   title = 'noxum';
 
   onSubmit(data) {
-    // Process checkout data here
     this.diabetesForm.reset();
-
     console.warn('Your order has been submitted', data);
+    this.router.navigate(['/results/' + this.hasDiabetes(data)]);
   }
+
+  hasDiabetes(data) {
+    if(true) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }
