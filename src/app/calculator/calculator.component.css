@@ -10,3 +10,6 @@
   
   .lh-condensed { line-height: 1.25; }
   
+  .error {
+    background-color: #ff373796;
+  }
