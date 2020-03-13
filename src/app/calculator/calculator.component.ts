@@ -91,8 +91,8 @@ export class CalculatorComponent {
     +this.diabetesForm.get('pedigree').value,
     +this.diabetesForm.get('age').value]).expandDims();
 
-    console.log(model.predict(a))
-
+    (model.predict(a) as tf.Tensor).print();
+    
     if (true) {
       return true;
     }
